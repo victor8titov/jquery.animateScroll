@@ -30,8 +30,9 @@
             buffer          : 0, // Величина накопления движения скролла после предыдущего выполнения события
         }
 
-        if (typeof userOptions === 'function') o.callback = userOptions;
+        if (typeof userOptions === 'function') o.handler = userOptions;
         else if (typeof userOptions === 'object') $.extend(o, userOptions);
+        else return this;
        
         function scrollEvent(firstRun) {
             //  При первом запуске нужно отобразить елементы в зоне видимости
@@ -83,7 +84,7 @@
                     *   Действия над объектом в зоне видимости
                     */
                     obj.data('animated', 'true');
-                    if ( o.callback   ) o.callback.apply( this, arguments );
+                    if ( o.handler   ) o.handler.apply( this, arguments );
                     if ( o.classToAdd ) obj.addClass( o.classToAdd );
                     /*
                     *      
