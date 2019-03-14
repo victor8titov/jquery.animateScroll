@@ -13,7 +13,7 @@
     *   Добавить Css классы к объекту.
     Плагин возвращает объект jQuery что делает возможным продолжать цепочку вызовов.
     
-    Link: 
+    Link: https://github.com/victor8titov/jquery.animateScroll
 
 */
 (function( $ ){
