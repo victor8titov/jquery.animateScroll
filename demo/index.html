@@ -133,5 +133,16 @@ jQuery(document).ready(function() {
 });            
 </script>
 
+
+<div id ="up"></div>
+<script>
+$(function() {
+	$('#up').click(function() {
+		$('html, body').animate({
+			scrollTop: $('.top').offset().top 
+		}, 1000);
+	});
+});
+</script>
 </body>
 </html>

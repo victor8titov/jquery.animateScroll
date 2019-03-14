@@ -140,3 +140,25 @@ footer.footer{
 .visible{
 	opacity: 1;
 }
+
+#up {
+	position: fixed;
+	right: 50px;
+	bottom: 50px;
+	color: rgba(0, 0, 0, 0.2);
+	font-family: FontAwesome;
+}
+#up:after {
+	content: "\f139";
+	position: absolute;
+	left: -25px;	
+	top: -25px;
+	font-size: 50px;
+	-webkit-transition: all 400ms ease-in-out;
+	-o-transition: all 400ms ease-in-out;
+	transition: all 400ms ease-in-out;
+	
+}
+#up:hover:after {
+	color: rgba(0, 0, 0, 0.7);
+}
